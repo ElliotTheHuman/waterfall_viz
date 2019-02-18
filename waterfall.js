@@ -87,7 +87,7 @@ var chart = Highcharts.chart('looker-waterfall-chart', {
   },
 
   series: [{
-    upColor: "yellow", 
+    upColor: "#98FFAE", 
     color: "red",
     data: dt2,
     pointPadding: 0,
