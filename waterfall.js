@@ -1,3 +1,20 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @ElliotTheHuman Sign out
+0
+0 0 ElliotTheHuman/waterfall_viz
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
+waterfall_viz/waterfall.js
+26d091f  5 minutes ago
+@ElliotTheHuman ElliotTheHuman Update waterfall.js
+     
+134 lines (116 sloc)  3.5 KB
 function nFormatter(num) {
   num = (num>=0) ? num : Math.abs(num);
      if (num >= 1000000000) {  return ( (num / 1000000000.0).toFixed(1) + 'B');     }
@@ -37,15 +54,26 @@ function nFormatter(num) {
   var dt2 = [];
 
   for (var i = 0; i < queryResponse.fields.measure_like.length; i++) { 
-      let link = data[0][queryResponse.fields.measure_like[i].name].links
+      let link = data[0][queryResponse.fields.measure_like[i].name].links;
+      var name_value = queryResponse.fields.measure_like[i].label_short;
+      var y_value = data[0][queryResponse.fields.measure_like[i].name].value;
+      var color_value;
+
+      // if name is the name of the Closed Won sum measure (i.e. name = 'Won') then green
+      if (name_value != "Won") {
+        color_value = "pink"
+      }
+
+
       temp = {
-          name: queryResponse.fields.measure_like[i].label_short
-          , y: data[0][queryResponse.fields.measure_like[i].name].value
+          name: name_value
+          , y: y_value
           , events: {
               click: function(event) {
                   window.LookerCharts.Utils.openDrillMenu({links: link, event})
               }
-          }               
+          }
+          , color: color_value        
       };
       total += (data[0][queryResponse.fields.measure_like[i].name].value > 0) ? data[0][queryResponse.fields.measure_like[i].name].value : 0;
       dt2.push(temp);
@@ -131,3 +159,16 @@ if (config.start_end_band) {
   };
   looker.plugins.visualizations.add(viz);
 }());
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Press h to open a hovercard with more details.
