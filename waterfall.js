@@ -1,20 +1,5 @@
 Skip to content
- 
-Search or jump to…
 
-Pull requests
-Issues
-Marketplace
-Explore
- @ElliotTheHuman Sign out
-0
-0 0 ElliotTheHuman/waterfall_viz
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
-waterfall_viz/waterfall.js
-26d091f  5 minutes ago
-@ElliotTheHuman ElliotTheHuman Update waterfall.js
-     
-134 lines (116 sloc)  3.5 KB
 function nFormatter(num) {
   num = (num>=0) ? num : Math.abs(num);
      if (num >= 1000000000) {  return ( (num / 1000000000.0).toFixed(1) + 'B');     }
@@ -159,16 +144,3 @@ if (config.start_end_band) {
   };
   looker.plugins.visualizations.add(viz);
 }());
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Press h to open a hovercard with more details.
