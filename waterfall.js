@@ -1,5 +1,3 @@
-Skip to content
-
 function nFormatter(num) {
   num = (num>=0) ? num : Math.abs(num);
      if (num >= 1000000000) {  return ( (num / 1000000000.0).toFixed(1) + 'B');     }
