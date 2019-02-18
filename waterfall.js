@@ -46,7 +46,7 @@ function nFormatter(num) {
       if (name_value != "Won") {
         color_value = "yellow";
       } else {
-        color_value = "red"
+        color_value = "red";
       }
 
 
