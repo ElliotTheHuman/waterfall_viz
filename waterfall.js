@@ -44,7 +44,7 @@ function nFormatter(num) {
 
       // if name is the name of the Closed Won sum measure (i.e. name = 'Won') then green
       if (name_value != "Won") {
-        color_value = "pink"
+        color_value = "yellow"
       }
 
 
