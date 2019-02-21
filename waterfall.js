@@ -100,9 +100,9 @@ var chart = Highcharts.chart('looker-waterfall-chart', {
   },
 
   plotOptions: {
-        candlestick: {
-            lineColor: '#404048'
-        }
+    	waterfall: {
+      	borderColor: '#FFFFFF'
+      }
    },
   
   series: [{
