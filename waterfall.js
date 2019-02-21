@@ -44,9 +44,9 @@ function nFormatter(num) {
 
       // if name is the name of the Closed Won sum measure (i.e. name = 'Won') then green
       if (name_value == "Won" || y_value >= 0) {
-        color_value = "#9F4AB4"; // Good Color
+        color_value = "#10C871"; // Good Color
       } else {
-        color_value = "#FFB690"; // Bad Color 
+        color_value = "#f56776"; // Bad Color 
       }
 
 
@@ -98,11 +98,6 @@ var chart = Highcharts.chart('looker-waterfall-chart', {
         return '$'+nFormatter(this.y);
     },
   },
-  plotOptions: {
-        candlestick: {
-            lineColor: '#FFFFFF'
-        }
-   },
 
   series: [{
     upColor: "#98FFAE", 
