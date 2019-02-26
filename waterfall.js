@@ -54,7 +54,7 @@ function nFormatter(num) {
 
 
       temp = {
-          name: name_value + "(" + data[0][queryResponse.fields.measure_like[i+(number_of_measures/2)].name].value + ")"
+          name: name_value + "\n(" + data[0][queryResponse.fields.measure_like[i+(number_of_measures/2)].name].value + ")"
           , y: y_value
           , events: {
               click: function(event) {
