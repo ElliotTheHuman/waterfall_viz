@@ -108,7 +108,7 @@ var chart = Highcharts.chart('looker-waterfall-chart', {
           style: {
             "color": "#000000",
             "textOutline": "0px contrast",
-            "fontFamily": "serif"
+            "fontFamily": "Open Sans"
           }
         }
       }
