@@ -88,6 +88,7 @@ var chart = Highcharts.chart('looker-waterfall-chart', {
     title: {
       text: 'Pipeline ($)'
     }
+    , min: 0 
   },
 
   legend: {
