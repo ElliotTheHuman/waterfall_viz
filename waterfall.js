@@ -49,7 +49,7 @@ function nFormatter(num) {
       } else if (name_value == "Lost") {
         color_value = "#FFACB7"; // Bad Color 
       } else {
-        color_value = "#FED8A0";  // Neutral Color
+        color_value = "#FFEED2";  // Neutral Color
       }
 
 
