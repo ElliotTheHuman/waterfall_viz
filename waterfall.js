@@ -35,8 +35,9 @@ function nFormatter(num) {
   var temp;
   var total = 0;
   var dt2 = [];
+  var number_of_measures = queryResponse.fields.measure_like.length;
 
-  for (var i = 0; i < (queryResponse.fields.measure_like.length)/2; i++) { 
+  for (var i = 0; i < number_of_measures/2; i++) { 
       let link = data[0][queryResponse.fields.measure_like[i].name].links;
       var name_value = queryResponse.fields.measure_like[i].label_short;
       var y_value = data[0][queryResponse.fields.measure_like[i].name].value;
@@ -53,7 +54,7 @@ function nFormatter(num) {
 
 
       temp = {
-          name: name_value + "(" + data[0][queryResponse.fields.measure_like[i].name].value + ")"
+          name: name_value + "(" + data[0][queryResponse.fields.measure_like[i+(number_of_measures/2)].name].value + ")"
           , y: y_value
           , events: {
               click: function(event) {
