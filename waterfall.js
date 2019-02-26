@@ -43,10 +43,12 @@ function nFormatter(num) {
       var color_value;
 
       // if name is the name of the Closed Won sum measure (i.e. name = 'Won') then green
-      if (name_value == "Won" || y_value >= 0) {
+      if (name_value == "Won") {
         color_value = "#10C871"; // Good Color
-      } else {
+      } else if (name_value == "Lost") {
         color_value = "#f56776"; // Bad Color 
+      } else {
+        color_value = "#FED8A0";  // Neutral Color
       }
 
 
