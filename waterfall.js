@@ -103,10 +103,10 @@ var chart = Highcharts.chart('looker-waterfall-chart', {
 
   plotOptions: {
     	waterfall: {
-      	borderColor: '#FFFFFF',
-        dataLabels: {
-          color: '#000000'
-        }
+      	borderColor: '#FFFFFF'
+        // , dataLabels: {
+        //   color: '#000000'
+        // }
       }
    },
   
